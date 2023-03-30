@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Advertisement list</title>
+</head>
+<body>
+<ul>
+ {% for advertisement in advertisements %}
+        <li>{{advertisement}}</li>
+ {% endfor %}
+</ul>
+<h4>Количество запросов - {{ count_request }}</h4>
+<form method="post">
+{% csrf_token %}
+    <input type="submit" value="Создать статью">
+</form>
+
+<h4>{{ post_response }}</h4>
+</body>
+</html>

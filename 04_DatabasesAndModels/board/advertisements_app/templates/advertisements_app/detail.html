@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+<h1>{{ post.title }}</h1>
+<ul>
+    <li><h3>Цена: {{ post.price }} руб.</h3><hr></li>
+    <li><h3>Описание: {{ post.description }}</h3><hr></li>
+    <li><h3>Рубрика: {{ post.category }}</h3><hr></li>
+    <li><h3>Кол-во просмотров: {{ post.views_count }}</h3><hr></li>
+    <p><li><h3>Автор: {{ post.author }}</h3><hr></li></p>
+    <li><h3>Почта: {{ post.author.emaill }}</h3><hr></li>
+    <li><h3>Номер телефона: {{ post.author.number }}</h3><hr></li>
+    </ul>
+
+</body>
+</html>

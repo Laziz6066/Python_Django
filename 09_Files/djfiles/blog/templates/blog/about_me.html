@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Данные пользователя</title>
+</head>
+<body>
+<h2>Данные о пользователе</h2>
+<ul>
+
+    <li>Ник пользователя: <strong>{{ request.user.username }}</strong></li>
+    <li>Почта: <strong>{{ request.user.email }}</strong></li>
+    <li>Имя пользователя: <strong>{{ request.user.first_name }}</strong></li>
+    <li>Фамилия пользователя: <strong>{{ request.user.last_name }}</strong></li>
+
+
+
+    {% for i in acc %}
+    <li>Дата рождения: <strong>{{ i.date_of_birth }}</strong></li>
+    <li>Город проживания: <strong>{{ i.city }}</strong></li>
+    <li>Номер телефона: <strong>{{ i.phone }}</strong></li>
+
+    {% endfor %}
+
+<p><h3><a href="{% url 'edit_profile' %}">Изменить данные о себе</a></h3>
+</ul>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+</head>
+<body>
+<h1>Новости</h1>
+
+<form method="get">
+  <select name="tag">
+    <option value="">All</option>
+    {% for t in tags %}
+      <option value="{{ t.tag }}" {% if t.tag == selected_tag %}selected{% endif %}>{{ t.tag }}</option>
+    {% endfor %}
+  </select>
+  <input type="submit" value="Filter">
+</form>
+
+
+{% if news %}
+
+{% for i in news %}
+  <ul>
+    <li>
+
+            <strong><h3><a href="app_users/{{ i.id }}/detail/">{{ i.title }}</a></h3></strong>
+
+    </li>
+  </ul>
+{% endfor %}
+{% else %}
+<p>Новостей нет</p>
+{% endif %}
+
+
+{% if request.user.is_authenticated %}
+    <h2>Добро пожаловать на сайт {{ request.user.first_name }}</h2>
+        <a href="{% url 'logout' %}">Выйти</a>|
+
+{% else %}
+    <h3>Вы не авторизованы на нашем сайте</h3>
+        <a href="{% url 'login' %}">Войти</a>
+        | <a href="{% url 'another_register' %}">Регистрация</a>
+
+{% endif %}
+
+
+{% if request.user.is_authenticated %}
+<p><a href="{% url 'create_news' %}"><button>Добавить новость</button></a>
+    <h4><a href="{% url 'acc' %}">Данные о пользователе</a> </h4>
+{% endif %}
+
+
+
+<h4><a href="{% url 'moderator' %}">Посмотреть публикации ожидающие одобрения</a></h4>
+<h4><a href="{% url 'users' %}">Посмотреть пользователей ожидающих верификацию</a></h4>
+
+</body>
+</html>

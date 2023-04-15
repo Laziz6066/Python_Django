@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Страница Модератора</title>
+</head>
+<body>
+
+
+{% if news %}
+<h2>Публикации ожидающие одобрения</h2>
+
+{% for i in news %}
+
+<ul>
+  <strong><h3><a href="app_users/{{ i.id }}/mod_detail/">{{ i.title }}</a></h3></strong>
+</ul>
+
+{% endfor %}
+
+{% else %}
+<h2>Все публикации одобрены</h2>
+
+{% endif %}
+
+</body>
+</html>

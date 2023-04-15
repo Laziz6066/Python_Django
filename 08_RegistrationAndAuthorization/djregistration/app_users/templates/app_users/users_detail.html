@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Верификация</title>
+</head>
+<body>
+
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.is_active }}
+    <input type="submit" value="Разрешить верификацию">
+          </form>
+
+</body>
+</html>

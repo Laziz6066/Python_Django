@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+{% if profile %}
+{% for i in profile %}
+<ul>
+  <strong><h3><a href="app_users/{{ i.id }}/users_detail/">{{ i.username }}</a></h3></strong>
+</ul>
+{% endfor %}
+{% else %}
+<h1>Все пользователи прошли верификацию</h1>
+{% endif %}
+</body>
+</html>

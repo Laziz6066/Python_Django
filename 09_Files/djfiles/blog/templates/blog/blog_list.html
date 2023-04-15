@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+</head>
+<body>
+{% if request.user.is_authenticated %}
+    <h2>Добро пожаловать на сайт {{ request.user.first_name }}</h2>
+        <a href="{% url 'logout' %}">Выйти</a>|
+
+{% else %}
+    <h3>Вы не авторизованы на нашем сайте</h3>
+        <a href="{% url 'login' %}">Войти</a>
+        | <a href="{% url 'another_register' %}">Регистрация</a>
+
+{% endif %}
+<h1>Лента</h1>
+{% for file in files %}
+
+  <p>{{ file.author.username }}: <a href="{{ file.id }}/detail"> {{ file.description | truncatechars:100 }}</a></p>
+
+{% endfor %}
+
+
+<a href="{% url 'upload_csv' %}">Добавить несколько записей</a>
+
+
+
+{% if request.user.is_authenticated %}
+<p><a href="{% url 'blog_entry' %}"><button>Добавить запись в блог</button></a>
+    <h4><a href="{% url 'acc' %}">Данные о пользователе</a> </h4>
+{% endif %}
+
+</body>
+</html>

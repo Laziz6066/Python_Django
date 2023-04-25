@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+<title>Main page</title>
+
+
+{% trans 'Welcome to the website,' as wel %}
+{% trans 'Brithday' as br %}
+{% trans 'City' as ci %}
+{% trans 'You are not authorized on our website.' as y %}
+
+{% if request.user.is_authenticated %}
+     {{ wel }} {{ request.user.first_name }}
+
+    <p>{{ br }}: {{ request.user.profile.date_of_birth }}</p>
+    <p>{{ ci }}: {{ request.user.profile.city }}</p>
+{% else %}
+    {{ y }}
+    <a href="{% url 'login' %}">Enter</a>
+{% endif %}
+<h2>{% trans 'I am the main page' %}</h2>
+
+{% endblock %}

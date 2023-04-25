@@ -1,0 +1,180 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-27 21:16+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\app_goods\apps.py:7 .\app_goods\models.py:10
+msgid "goods"
+msgstr "товары"
+
+#: .\app_goods\models.py:6
+msgid "code"
+msgstr "Артикул"
+
+#: .\app_goods\models.py:7
+msgid "price"
+msgstr "Цена"
+
+#: .\app_goods\models.py:11
+msgid "good"
+msgstr "товары"
+
+#: .\app_pages\views.py:12
+#, python-format
+msgid "Hello there! Today is %(date)s %(time)s"
+msgstr "Привет! Сегодня %(date)s %(time)s"
+
+#: .\templates\employment\vacancy.html:6
+msgid "Job openings"
+msgstr "Вакансии"
+
+#: .\templates\employment\vacancy.html:7
+msgid "There are no vacancies."
+msgstr "Вакансий нет."
+
+#: .\templates\goods\items_list.html:6
+msgid "List of products"
+msgstr "Список продуктов"
+
+#: .\templates\goods\items_list.html:7
+msgid "There are no goods."
+msgstr "Там нет никаких товаров."
+
+#: .\templates\goods\upload_price_file.html:6
+msgid "Downloading a file with prices"
+msgstr "Загрузка файла с ценами"
+
+#: .\templates\goods\upload_price_file.html:12
+#: .\templates\media\upload_file.html:13
+msgid "Upload a file"
+msgstr "Загрузить файл"
+
+#: .\templates\greetings.html:5
+msgid "What time is it?"
+msgstr "Который час?"
+
+#: .\templates\main.html:8 .\templates\users\account.html:7
+msgid "Welcome to the website,"
+msgstr "Добро пожаловать на нашу страницу"
+
+#: .\templates\main.html:9
+msgid "Brithday"
+msgstr "День рождения"
+
+#: .\templates\main.html:10
+msgid "City"
+msgstr "Город"
+
+#: .\templates\main.html:11 .\templates\users\account.html:9
+msgid "You are not authorized on our website."
+msgstr "Вы не авторизованы на нашем веб-сайте."
+
+#: .\templates\main.html:22
+msgid "I am the main page"
+msgstr "Я - главная страница"
+
+#: .\templates\media\file_form_upload.html:6
+#: .\templates\media\upload_file.html:6
+msgid "File Upload"
+msgstr "Загрузка файла"
+
+#: .\templates\media\file_form_upload.html:13
+msgid "Download"
+msgstr "Скачать"
+
+#: .\templates\media\resize_image.html:5
+msgid "Image Reduction"
+msgstr "Уменьшение изображения"
+
+#: .\templates\media\resize_image.html:12
+msgid "Reduce the image"
+msgstr "Уменьшите изображение"
+
+#: .\templates\media\upload_files.html:6
+msgid "Uploading files"
+msgstr "Загрузка файлов"
+
+#: .\templates\media\upload_files.html:13
+msgid "Upload files"
+msgstr "Загружать файлы"
+
+#: .\templates\translation_example.html:6
+msgid "Our translation page title."
+msgstr "Наша переведенная страница"
+
+#: .\templates\translation_example.html:9
+msgid "Translated text."
+msgstr "Переведенный текст"
+
+#: .\templates\translation_example.html:23
+msgid "Welcome to our page"
+msgstr "Добро пожаловать на нашу страницу"
+
+#: .\templates\users\account.html:5
+msgid "Profile"
+msgstr "Профиль"
+
+#: .\templates\users\account.html:8
+msgid "The avatar is not loaded"
+msgstr "Аватар не загружен"
+
+#: .\templates\users\edit_account.html:6
+msgid "Profile Changes"
+msgstr "Изменения профиля"
+
+#: .\templates\users\edit_account.html:11
+msgid "Update"
+msgstr "Обновление"
+
+#: .\templates\users\login.html:5
+msgid "Page"
+msgstr "Страница"
+
+#: .\templates\users\login.html:8
+msgid "Login page"
+msgstr "Страница входа в систему"
+
+#: .\templates\users\login.html:12
+msgid "Login"
+msgstr "Авторизоваться"
+
+#: .\templates\users\logout.html:7
+msgid "Logout"
+msgstr "Выход из системы"
+
+#: .\templates\users\register.html:5 .\templates\users\register.html:8
+msgid "Registration"
+msgstr "Регистрация"
+
+#: .\templates\users\register.html:12
+msgid "Sign up"
+msgstr "Войти"
+
+#: .\templates\users\restore_password.html:6
+msgid "Password Recovery"
+msgstr "Восстановление пароля"
+
+#: .\templates\users\restore_password.html:11
+msgid "Recover Password"
+msgstr "Восстановить пароль"
+
+#: .\templates\welcome.html:5
+msgid "Welcome"
+msgstr "Добро пожаловать!"

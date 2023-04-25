@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+
+{% block content %}
+<title>{% trans 'Uploading files' %}</title>
+
+
+<h2></h2>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">{% trans 'Upload files' %}</button>
+</form>
+
+{% endblock %}
+

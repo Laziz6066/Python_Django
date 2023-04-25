@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+<title>{% trans 'Profile' %}</title>
+
+{% trans 'Welcome to the website,' as we %}
+{% trans 'The avatar is not loaded' as av %}
+{% trans 'You are not authorized on our website.' as yo %}
+
+
+{% if request.user.is_authenticated %}
+     {{ we }}{{ request.user.username }}
+    {% if request.user.avatar %}
+        <p>
+        <img src="{{ request.user.avatar.url }}" alt="Smiley face" width="250" height="250">
+        </p>
+    {% else %}
+        <p>{{ av }}</p>
+    {% endif %}
+{% else %}
+    {{ yo }}
+    <a href="{% url 'login' %}">Enter</a>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'market/base.html' %} %}
+{% load i18n %}
+{% block content %}
+
+    <title>{% trans 'Replenishment of the balance' %}</title>
+
+  <h2>{% trans 'Replenishment of the balance' %}</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">{% trans 'Submit' %}</button>
+</form>
+
+{% endblock %}

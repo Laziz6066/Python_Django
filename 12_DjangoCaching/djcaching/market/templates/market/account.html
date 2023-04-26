@@ -1,0 +1,42 @@
+{% extends 'market/base.html' %} %}
+{% load i18n %}
+{% block content %}
+
+    <meta charset="UTF-8">
+    <title>{{ request.user.profile.first_name }}</title>
+
+
+
+<h2>{% trans "User's personal account" %}: {{ request.user.profile.first_name }}</h2>
+
+
+
+    <div>
+      <span style="float:right"><h3><a href="{% url 'top_up_your_balance' profile.id %}">{% trans 'Top up your balance' %}</a>
+      </h3></span><p class="blue"><strong>{% trans 'Balance'%}: <strong>{{ profile.balance.balance }}<br>
+        <br><a href="{% url 'history' %}">{% trans 'Purchase history' %}</a></strong></strong></p><br/>
+    </div>
+
+
+<h3>Stocks</h3>
+{% for i in item %}
+    {% if i.stocks %}
+        <p class="blue"><strong>{% trans 'Stock' %}: {{ i.stocks }}</strong></p>
+        <p class="blue"><strong>{% trans 'From the company' %}: {{ i.shop }}</strong></p>
+        <p class="blue"><strong>{% trans 'For the product' %}: {{ i.item_name }}</strong></p><hr>
+    {% endif %}
+{% endfor %}
+
+
+<h3>{% trans 'Discounts' %}</h3>
+{% for i in item %}
+    {% if i.offers %}
+        <p class="blue"><strong>{% trans 'Offers' %}: {{ i.offers }}</strong></p>
+        <p class="blue"><strong>{% trans 'From the company' %}: {{ i.shop }}</strong></p>
+        <p class="blue"><strong>{% trans 'For the product' %}: {{ i.item_name }}</strong></p><hr>
+    {% endif %}
+{% endfor %}
+
+<center><h2><a href="{% url 'home' %}">{% trans 'Go to the main page' %}</a> </h2></center>
+
+{% endblock %}

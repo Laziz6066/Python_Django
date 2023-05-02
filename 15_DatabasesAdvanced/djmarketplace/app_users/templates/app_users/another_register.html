@@ -1,0 +1,17 @@
+{% extends 'app_users/base.html' %} %}
+{% load i18n %}
+{% block content %}
+    <meta charset="UTF-8">
+    <title>{% trans 'Registration' %}</title>
+
+
+<h2>{% trans 'Registration page' %}</h2>
+
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">{% trans 'Registration' %}</button>
+
+</form>
+
+{% endblock %}

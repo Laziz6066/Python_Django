@@ -1,0 +1,25 @@
+{% extends 'app_users/base.html' %} %}
+{% load i18n %}
+{% block content %}
+
+<title>{% trans 'List of stores' %}</title>
+
+{% if request.user.is_authenticated %}
+    <h2>{% trans 'Welcome to the website' %} {{ request.user.profile.first_name }}</h2>
+        <h4><a href="{% url 'logout' %}">{% trans 'Logout' %}</a>|
+        <a href="{% url 'account' %}">{% trans 'Personal account' %}</a></h4>
+
+{% else %}
+    <h3>{% trans 'You are not logged in to our website' %}</h3>
+        <h4><a href="{% url 'login' %}">{% trans 'Login' %}</a>
+        | <a href="{% url 'another_register' %}">{% trans 'Registration' %}</a></h4>
+
+{% endif %}
+
+<h2><p>{% trans 'List of stores' %}</p></h2>
+
+{% for shop in object_list %}
+    <h3><li><a href="{% url 'detail' pk=shop.pk %}">{{ shop.shop_name }}</a></li></h3>
+{% endfor %}
+
+{% endblock %}

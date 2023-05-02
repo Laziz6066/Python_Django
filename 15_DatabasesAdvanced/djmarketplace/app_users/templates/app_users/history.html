@@ -1,0 +1,21 @@
+{% extends 'app_users/base.html' %} %}
+{% load i18n %}
+{% load cache %}
+
+{% block content %}
+
+
+
+
+<title>{% trans 'History' %}</title>
+{% cache 1 user|user_lang request.LANGUAGE_CODE 'history' %}
+{% for i in purchases %}
+{% trans 'Store name' %}: {{ i.item.shop }}<br>
+{% trans 'Product name' %}: {{ i.item.item_name }}<br>
+{% trans 'Product price' %}: {{ i.item.price }}<br>
+{% trans 'Time of purchase' %}: {{ i.timestamp }}<br><hr>
+{% endfor %}
+{% endcache %}
+
+<a href="{% url 'product_report' %}">Отчет</a>
+{% endblock %}

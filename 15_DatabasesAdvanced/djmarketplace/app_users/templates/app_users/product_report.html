@@ -1,0 +1,32 @@
+{% extends 'app_users/base.html' %} %}
+{% load i18n %}
+{% block content %}
+  <h1>Best Selling Products</h1>
+  <form method="get">
+    <input type="date" name="start_date" value="{{ request.GET.start_date }}">
+    <input type="date" name="end_date" value="{{ request.GET.end_date }}">
+    <button type="submit">Filter</button>
+  </form>
+  <table>
+    <thead>
+      <tr>
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Units Sold</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for product in products %}
+        <tr>
+          <td>{{ product.item__id }}</td>
+          <td>{{ product.item__item_name }}</td>
+          <td>{{ product.total_sold }}</td>
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="3">No products sold within the specified date range.</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

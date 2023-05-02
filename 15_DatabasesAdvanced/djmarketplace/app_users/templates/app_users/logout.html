@@ -1,0 +1,11 @@
+{% extends 'app_users/base.html' %} %}
+{% load i18n %}
+{% block content %}
+
+<title>{% trans 'Exit' %}</title>
+
+<h2>{% trans 'You have logged out from under your account' %}</h2>
+
+<h2><a href="{% url 'home' %}">{% trans 'Go to the main page' %}</a> </h2>
+
+{% endblock %}

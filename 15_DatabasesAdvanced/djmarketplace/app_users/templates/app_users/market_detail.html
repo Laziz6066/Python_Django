@@ -1,0 +1,61 @@
+{% extends 'app_users/base.html' %} %}
+{% load i18n %}
+
+{% block content %}
+
+    <title>{{ shop.shop_name }}</title>
+
+
+<ul>
+{% if shop.items.all %}
+    {% for item in shop.items.all %}
+        {% trans 'Product name:' %} {{ item.item_name }}<br>
+        {% trans 'Price:' %} {{ item.price }}<br>
+        {% trans 'Remains:' %} {{ item.quantity }}<br>
+        {% trans 'Stock:' %}
+        {% if item.stocks %}
+            {{ item.stocks }}<br>
+        {% else %}
+            {% trans 'There are no shares' %}<br>
+        {% endif %}
+        {% trans 'Offers:' %}
+        {% if item.offers %}
+            {{ item.offers }}
+        {% else %}
+            {% trans 'There are no offers' %}
+        {% endif %}
+
+
+    <form method="POST" action="{% url 'buy_item' item.pk %}">
+        {% csrf_token %}
+        <input type="number" name="quantity" min="1" value="1" required>
+        <button type="submit">{% trans 'Buy' %}</button>
+    </form>
+
+
+
+
+    <hr><br>
+
+    {% endfor %}
+
+
+
+{% else %}
+    {% trans 'There are no products' %}
+{% endif %}
+
+
+
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+
+<center><h2><a href="{% url 'home' %}">{% trans 'Go to the main page' %}</a> </h2></center>
+
+{% endblock %}

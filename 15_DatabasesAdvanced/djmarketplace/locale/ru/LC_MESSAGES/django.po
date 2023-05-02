@@ -1,0 +1,258 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-28 17:20+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\app_users\models.py:8
+msgid "user"
+msgstr "пользователь"
+
+#: .\app_users\models.py:9
+msgid "first_name"
+msgstr "имя пользователя"
+
+#: .\app_users\models.py:10
+msgid "last_name"
+msgstr "фамилия"
+
+#: .\app_users\models.py:11
+msgid "email"
+msgstr "электронная почта"
+
+#: .\app_users\models.py:12
+msgid "password"
+msgstr "пароль"
+
+#: .\app_users\models.py:13
+msgid "city"
+msgstr "город"
+
+#: .\app_users\models.py:14
+msgid "date_of_birth"
+msgstr "дата рождения"
+
+#: .\app_users\models.py:15
+msgid "phone"
+msgstr "телефон"
+
+#: .\app_users\models.py:16
+msgid "is_active"
+msgstr "является активным"
+
+#: .\app_users\models.py:26
+msgid "profile"
+msgstr "профиль"
+
+#: .\app_users\models.py:27 .\app_users\models.py:60
+msgid "balance"
+msgstr "баланс"
+
+#: .\app_users\models.py:34
+msgid "shop_name"
+msgstr "название магазина"
+
+#: .\app_users\models.py:35 .\app_users\models.py:51
+msgid "created_at"
+msgstr "дата создания"
+
+#: .\app_users\models.py:47
+msgid "shop"
+msgstr "магазин"
+
+#: .\app_users\models.py:48
+msgid "item_name"
+msgstr "название товара"
+
+#: .\app_users\models.py:49
+msgid "stocks"
+msgstr "акции"
+
+#: .\app_users\models.py:50
+msgid "offers"
+msgstr "предложения"
+
+#: .\app_users\models.py:52
+msgid "price"
+msgstr "цена"
+
+#: .\app_users\models.py:59
+msgid "item"
+msgstr "товар"
+
+#: .\app_users\models.py:61
+msgid "timestamp"
+msgstr "отметка времени"
+
+#: .\app_users\templates\app_users\account.html:10
+msgid "User's personal account"
+msgstr "Личный кабинет пользователя"
+
+#: .\app_users\templates\app_users\account.html:15
+msgid "Top up your balance"
+msgstr "Пополните свой баланс"
+
+#: .\app_users\templates\app_users\account.html:16
+msgid "Balance"
+msgstr "Баланс"
+
+#: .\app_users\templates\app_users\account.html:17
+msgid "Purchase history"
+msgstr "История покупок"
+
+#: .\app_users\templates\app_users\account.html:24
+msgid "Stock"
+msgstr "Акция"
+
+#: .\app_users\templates\app_users\account.html:25
+#: .\app_users\templates\app_users\account.html:35
+msgid "From the company"
+msgstr "От компании"
+
+#: .\app_users\templates\app_users\account.html:26
+#: .\app_users\templates\app_users\account.html:36
+msgid "For the product"
+msgstr "Для продукта"
+
+#: .\app_users\templates\app_users\account.html:31
+msgid "Discounts"
+msgstr "Скидки"
+
+#: .\app_users\templates\app_users\account.html:34
+msgid "Offers"
+msgstr "Предложения"
+
+#: .\app_users\templates\app_users\account.html:40
+#: .\app_users\templates\app_users\logout.html:9
+#: .\app_users\templates\app_users\market_detail.html:49
+msgid "Go to the main page"
+msgstr "Перейдите на главную страницу"
+
+#: .\app_users\templates\app_users\another_register.html:5
+#: .\app_users\templates\app_users\another_register.html:13
+#: .\app_users\templates\app_users\list_of_stores.html:15
+msgid "Registration"
+msgstr "Регистрация"
+
+#: .\app_users\templates\app_users\another_register.html:8
+msgid "Registration page"
+msgstr "Страница регистрации"
+
+#: .\app_users\templates\app_users\history.html:7
+msgid "History"
+msgstr "История"
+
+#: .\app_users\templates\app_users\history.html:10
+msgid "Store name"
+msgstr "Название магазина"
+
+#: .\app_users\templates\app_users\history.html:11
+msgid "Product name"
+msgstr "Наименование товара"
+
+#: .\app_users\templates\app_users\history.html:12
+msgid "Product price"
+msgstr "Цена продукта"
+
+#: .\app_users\templates\app_users\history.html:13
+msgid "Time of purchase"
+msgstr "Время покупки"
+
+#: .\app_users\templates\app_users\list_of_stores.html:5
+#: .\app_users\templates\app_users\list_of_stores.html:19
+msgid "List of stores"
+msgstr "Список магазинов"
+
+#: .\app_users\templates\app_users\list_of_stores.html:8
+msgid "Welcome to the website"
+msgstr "Добро пожаловать на веб-сайт"
+
+#: .\app_users\templates\app_users\list_of_stores.html:9
+msgid "Logout"
+msgstr "Выход из системы"
+
+#: .\app_users\templates\app_users\list_of_stores.html:10
+msgid "Personal account"
+msgstr "Личный кабинет"
+
+#: .\app_users\templates\app_users\list_of_stores.html:13
+msgid "You are not logged in to our website"
+msgstr "Вы не авторизованы на нашем веб-сайте"
+
+#: .\app_users\templates\app_users\list_of_stores.html:14
+#: .\app_users\templates\app_users\login.html:12
+msgid "Login"
+msgstr "Авторизоваться"
+
+#: .\app_users\templates\app_users\login.html:5
+msgid "Authorization"
+msgstr "Авторизация"
+
+#: .\app_users\templates\app_users\logout.html:5
+msgid "Exit"
+msgstr "Выход"
+
+#: .\app_users\templates\app_users\logout.html:7
+msgid "You have logged out from under your account"
+msgstr "Вы вышли из своей учетной записи"
+
+#: .\app_users\templates\app_users\market_detail.html:10
+msgid "Product name:"
+msgstr "Наименование товара:"
+
+#: .\app_users\templates\app_users\market_detail.html:11
+msgid "Price:"
+msgstr "Цена:"
+
+#: .\app_users\templates\app_users\market_detail.html:12
+msgid "Stock:"
+msgstr "Акция:"
+
+#: .\app_users\templates\app_users\market_detail.html:16
+msgid "There are no shares"
+msgstr "Акций нет"
+
+#: .\app_users\templates\app_users\market_detail.html:18
+msgid "Offers:"
+msgstr "Предложения:"
+
+#: .\app_users\templates\app_users\market_detail.html:22
+msgid "There are no offers"
+msgstr "Предложений нет"
+
+#: .\app_users\templates\app_users\market_detail.html:27
+msgid "Buy"
+msgstr "Купить"
+
+#: .\app_users\templates\app_users\market_detail.html:34
+msgid "Total cost of goods in the store:"
+msgstr "Общая стоимость товаров в магазине:"
+
+#: .\app_users\templates\app_users\market_detail.html:36
+msgid "There are no products"
+msgstr "Товаров пока нет"
+
+#: .\app_users\templates\app_users\top_up_your_balance.html:5
+#: .\app_users\templates\app_users\top_up_your_balance.html:7
+msgid "Replenishment of the balance"
+msgstr "Пополнение баланса"
+
+#: .\app_users\templates\app_users\top_up_your_balance.html:12
+msgid "Submit"
+msgstr "Пополнить"

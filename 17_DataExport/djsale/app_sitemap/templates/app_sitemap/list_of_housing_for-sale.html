@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список продаваемого жилья</title>
+</head>
+<body>
+{% for i in house %}
+{{ i.name }}<br>
+{{ i.description }}<br><hr>
+{% endfor %}
+</body>
+</html>
